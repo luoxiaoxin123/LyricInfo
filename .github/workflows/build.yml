@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+    branches: [ccr-555327e3-jpa77j]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # versionCode 取自提交数，需要完整历史
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build APKs
+        run: bash ./gradlew :app:assembleRelease :lite:assembleRelease --stacktrace
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lyricinfo-app
+          path: app/build/outputs/apk/release/*.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lyricinfo-lite
+          path: lite/build/outputs/apk/release/*.apk
