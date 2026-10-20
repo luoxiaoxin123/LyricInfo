@@ -28,6 +28,7 @@
 | 椒盐音乐 | `com.salt.music` | 逐字歌词、翻译 |
 | LX Music | `cn.toside.music.mobile` | 逐字歌词、翻译、罗马音 |
 | IKun Music | `com.ikunshare.music.mobile` | 逐字歌词、翻译、罗马音 |
+| Melodia | `com.lin0721.linmusic` | 逐字歌词、翻译（仅网易云曲库歌曲） |
 
 ### 待适配
 

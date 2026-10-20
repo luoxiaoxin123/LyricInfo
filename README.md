@@ -74,6 +74,7 @@ LyricInfo 是一个基于 libxposed API 102 的 Xposed/LSPosed 模块。它将�
 | 椒盐音乐 | `com.salt.music` |
 | LX Music | `cn.toside.music.mobile` |
 | IKun Music | `com.ikunshare.music.mobile` |
+| Melodia | `com.lin0721.linmusic` |
 
 另有 `:lite` 精简版本，用于触发播放器自身针对 ColorOS 锁屏岛的歌词输出逻辑，用户可在 LSPosed 管理器中自由勾选任意播放器进行尝试。
 

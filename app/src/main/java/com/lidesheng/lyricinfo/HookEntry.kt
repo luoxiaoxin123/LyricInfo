@@ -9,6 +9,7 @@ import io.github.libxposed.api.XposedModuleInterface.PackageLoadedParam
 import com.lidesheng.lyricinfo.core.LyricProvider
 import com.lidesheng.lyricinfo.providers.lxmusic.IKunMusicProvider
 import com.lidesheng.lyricinfo.providers.lxmusic.LxMusicProvider
+import com.lidesheng.lyricinfo.providers.melodia.MelodiaProvider
 import com.lidesheng.lyricinfo.providers.netease.NeteaseProvider
 import com.lidesheng.lyricinfo.providers.qishui.QishuiProvider
 import com.lidesheng.lyricinfo.providers.qqmusic.QQMusicProvider
@@ -29,7 +30,8 @@ class HookEntry : XposedModule() {
             MiuiPlayerProvider(),
             KugouProvider(),
             LxMusicProvider(),
-            IKunMusicProvider()
+            IKunMusicProvider(),
+            MelodiaProvider()
         )
     }
 
